@@ -65,6 +65,14 @@ The hash of the message **fails signature validation**.  At this point, we don't
 The signature provided isn't actually a signature of any text of Sartre.  It is actually a bag of bytes already taken from the blockchain,
 as [discovered by /r/JoukeH](https://www.reddit.com/r/Bitcoin/comments/4hf4xj/creator_of_bitcoin_reveals_identity/d2pf70v).
 
+** Edit a little later:**
+
+[Ryan Castelluci](https://twitter.com/ryancdotorg/) [did some legwork](https://gist.github.com/ryancdotorg/893815f426f181d838c1b44aa187f05a) 
+if you want to see how the scriptSig that Wright re-used corresponds to a transaction already on the blockchain, on the verifying-the-transaction level.
+This is apparently how Wright constructed the signature (from the published scriptSig).
+
+I'm not entirely sure why I fail to validate it if it could be validated -- possibly a version mixup on OpenSSL, like Dan Kaminsky is reporting.
+
 ## My Head Hurts. What Does This Mean?
 
 Wright's post is flimflam and hokum which stands up to a few minutes of cursory scrutiny, and demonstrates a competent sysadmin's level of familiarity
