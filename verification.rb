@@ -12,7 +12,7 @@ curve = OpenSSL::PKey::EC.new(group)
 curve.public_key = OpenSSL::PKey::EC::Point.new(group, claimed_public_key_bign)
 
 asn1 = File.binread("sig.asn1")
-claimed_signed_hash = File.binread(file_to_verify)
+claimed_signed_hash = OpenSSL::Digest::SHA256.digest(File.binread(file_to_verify))
 
 verifies = curve.dsa_verify_asn1(claimed_signed_hash, asn1)
 
