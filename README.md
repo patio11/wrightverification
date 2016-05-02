@@ -61,20 +61,27 @@ And now we try to validate the message, using Ruby's OpenSSL bindings.
 
 Feel free to inspect the code and tell me if I'm misunderstanding those bindings, but I rather don't think I am.
 
-The hash of the message **fails signature validation**.  At this point, we don't know whether the signature is anything other than random bytes.
+You cannot validate this signature against the purported hash of the Sartre message.  You can only validate it against the hash of the hash.
+
+Why is that?  Because Wright did not actually sign any derivative of the Sartre message.
 
 ## Spoiler: It Isn't Random Bytes
 
 The signature provided isn't actually a signature of any text of Sartre.  It is actually a bag of bytes already taken from the blockchain,
 as [discovered by /u/JoukeH on /r/Bitcoin](https://www.reddit.com/r/Bitcoin/comments/4hf4xj/creator_of_bitcoin_reveals_identity/d2pf70v).
 
-** Edit a little later:**
+_Major credit to this explanation:_
 
-[Ryan Castelluci](https://twitter.com/ryancdotorg/) [did some legwork](https://gist.github.com/ryancdotorg/893815f426f181d838c1b44aa187f05a) 
+[Ryan Castelluci](https://twitter.com/ryancdotorg/) [did some legwork](https://rya.nc/sartre.html) 
 if you want to see how the scriptSig that Wright re-used corresponds to a transaction already on the blockchain, on the verifying-the-transaction level.
 This is apparently how Wright constructed the signature (from the published scriptSig).
 
-I'm not entirely sure why I fail to validate it if it could be validated -- possibly a version mixup on OpenSSL, like Dan Kaminsky is reporting.
+You'll note that Bitcoin, for reasons known only to Satoshi, takes the signature of hash of a hash to generate the scriptSig.  Quoting Ryan:
+
+```
+I mentioned that normally, when using ECDSA to sign or verify a file, it is unnecessary to hash it manually. This is where CW's slight-of-hand lies. ECDSA computes the signature operation on a 256 bit integer referred to as z. Normally this is computed as sha256(message), but Bitcoin does sha256(sha256(modtx)). CW showed the signature verification using OpenSSL's ECDSA on sha256(modtx). OpenSSL's does another sha256 on the data, which makes the z value match.
+```
+
 
 ## My Head Hurts. What Does This Mean?
 
