@@ -1,6 +1,6 @@
 # Attempting (Failed) Verification of the Wright Signature
 
-Craig Wright (claims)[http://www.drcraigwright.net/jean-paul-sartre-signing-significance/] to be Satoshi, the pseudonymous creator of Bitcoin.
+Craig Wright [claims](http://www.drcraigwright.net/jean-paul-sartre-signing-significance/) to be Satoshi, the pseudonymous creator of Bitcoin.
 
 His proferred proof for this is a cryptographic signature.  This gets complicated:
 
