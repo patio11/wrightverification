@@ -29,5 +29,9 @@ To review Public/Private Crypto 101, you sign with your private key.  One verifi
 
 We don't possess Satoshi's private key.  We do possess one public key presumptively belonging to him.  We also possess a bag-of-bytes from Wright, which he claims signs the Sartre text.
 
-First, we generate the sig.
+First, we generate the sig.  Wright has provided `MEUCIQDBKn1Uly8m0UyzETObUSL4wYdBfd4ejvtoQfVcNCIK4AIgZmMsXNQWHvo6KDd2Tu6euEl1
+3VTC3ihl6XUlhcU+fM4=` for us, which is transcribed into signature.txt in this repository.
 
+```
+  $ base64 --decode signature.txt > sig.asn1
+```
