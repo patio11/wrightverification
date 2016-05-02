@@ -45,10 +45,13 @@ Dan Kaminsky generously [transcribed](https://dankaminsky.com/2016/05/02/validat
 ```
   # Verify signature of hash file.
   hexdump sn7-message.txt
+
   # You'll have to visually compare this against Wright's screenshots, but it matches.
   # If this sounds *fishy* to you, well, you're right.  Also fishy: making people hand-edit hex values
   # to verify trivial parts of this evidence chain.
 ```
+
+(Psst, _this is where magic happens._)
 
 And now we try to validate the message, using Ruby's OpenSSL bindings.
 
@@ -93,3 +96,10 @@ trust belonged to Satoshi.
 
 One of the very few things that Bitcoin meaningfully has accomplished as an ecosystem is a world-readable repository of reasonably-well-attested-to-keys.  Why was this demonstration so hard?!  It's bleeping trivial to the real Satoshi (or anyone possessing his private key) and nigh-upon impossible for anyone else.  (An acceptable alternative would have been "Move any Bitcoin from that same output, to anywhere, on command", but there are at
 least conceivable reasons why that would have been unwise.)
+
+## You Mentioned Magic Earlier, Twice
+
+Yep. The magic is replacing the message we think was signed (here, Satre's text) with another message.  The hash that is getting signed
+isn't getting calculated honestly from the Sartre text, as you can verify by spending an hour trying to coerce Sartre and SHA256 into
+telling you their secrets.  Wright just asserts the hash, and if you don't bother checking it, you don't see that he's substituted a hash
+that he already has a matching signature for.  For full details of this, read Ryan's writeup and about Bitcoin transaction structure.
