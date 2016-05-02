@@ -11,9 +11,16 @@ curve = OpenSSL::PKey::EC.new(group)
 
 curve.public_key = OpenSSL::PKey::EC::Point.new(group, claimed_public_key_bign)
 
-asn1 = File.binread("sig.asn1")
+signature = File.binread("sig.asn1")
 claimed_signed_hash = File.binread(file_to_verify)
 
-verifies = curve.dsa_verify_asn1(claimed_signed_hash, asn1)
+verifies = curve.dsa_verify_asn1(claimed_signed_hash, signature)
 
 puts "File #{file_to_verify} " + (verifies ? "verifies" : "does not verify") + " against Wright's provided signature."
+
+double_hashed = OpenSSL::Digest::SHA256.digest(claimed_signed_hash)
+
+verifies = curve.dsa_verify_asn1(double_hashed, signature)
+
+puts "*The hash of* #{file_to_verify} " + (verifies ? "verifies" : "does not verify") + " against Wright's provided signature."
+
