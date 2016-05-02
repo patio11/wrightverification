@@ -78,10 +78,9 @@ This is apparently how Wright constructed the signature (from the published scri
 
 You'll note that Bitcoin, for reasons known only to Satoshi, takes the signature of hash of a hash to generate the scriptSig.  Quoting Ryan:
 
-```
+<blockquote>
 I mentioned that normally, when using ECDSA to sign or verify a file, it is unnecessary to hash it manually. This is where CW's slight-of-hand lies. ECDSA computes the signature operation on a 256 bit integer referred to as z. Normally this is computed as sha256(message), but Bitcoin does sha256(sha256(modtx)). CW showed the signature verification using OpenSSL's ECDSA on sha256(modtx). OpenSSL's does another sha256 on the data, which makes the z value match.
-```
-
+</blockquote>
 
 ## My Head Hurts. What Does This Mean?
 
