@@ -7,9 +7,9 @@ His proferred proof for this is a cryptographic signature.  This gets complicate
 1)  A certain [well-known transaction](https://blockchain.info/tx/f4184fc596403b9d638783cf57adfe4c75c605f6356fbc91338530e9831e9e16), Bitcoin's first, was between Satoshi and Hal Finney.
 We treat the provenance of this transaction as a settled question.
 
-2)  Anyone controlling the public key corresponding either the input address or the change address from that transaction is, presumptively, associated with Satoshi.
+2)  Anyone controlling the private key corresponding either the input address or the change address from that transaction is, presumptively, associated with Satoshi.
 
-3)  Craig claims that he can sign an arbitrary message with the public key corresponding to the input address, 12cbQLTFMXRnSzktFkuoG3eHoMeFtpTu3S
+3)  Craig claims that he can sign an arbitrary message with the private key corresponding to the input address, 12cbQLTFMXRnSzktFkuoG3eHoMeFtpTu3S
 
 4)  Craig claims to have signed a passage about Sartre.
 
