@@ -63,7 +63,7 @@ The hash of the message **fails signature validation**.  At this point, we don't
 ## Spoiler: It Isn't Random Bytes
 
 The signature provided isn't actually a signature of any text of Sartre.  It is actually a bag of bytes already taken from the blockchain,
-as [discovered by /r/JoukeH](https://www.reddit.com/r/Bitcoin/comments/4hf4xj/creator_of_bitcoin_reveals_identity/d2pf70v).
+as [discovered by /u/JoukeH on /r/Bitcoin](https://www.reddit.com/r/Bitcoin/comments/4hf4xj/creator_of_bitcoin_reveals_identity/d2pf70v).
 
 ** Edit a little later:**
 
