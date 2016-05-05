@@ -72,7 +72,7 @@ as [discovered by /u/JoukeH on /r/Bitcoin](https://www.reddit.com/r/Bitcoin/comm
 
 _Major credit to this explanation:_
 
-[Ryan Castelluci](https://twitter.com/ryancdotorg/) [did some legwork](https://rya.nc/sartre.html) 
+[Ryan Castellucci](https://twitter.com/ryancdotorg/) [did some legwork](https://rya.nc/sartre.html) 
 if you want to see how the scriptSig that Wright re-used corresponds to a transaction already on the blockchain, on the verifying-the-transaction level.
 This is apparently how Wright constructed the signature (from the published scriptSig).
 
