@@ -89,7 +89,7 @@ with cryptographic tools, but ultimately demonstrates no non-public information 
 
 ## Do You Believe Wright Is Satoshi?
 
-But for the endorsement of core developer [Gavin Andresen](http://gavinandresen.ninja/satoshi), I would assume that Wright used amateur magician tactics to distract
+But for the endorsement of developer [Gavin Andresen](http://gavinandresen.ninja/satoshi), I would assume that Wright used amateur magician tactics to distract
 non-technical or non-expert staff of the BBC and the Economist during a stage-managed demonstration.  I'm reasonably confident that
 I could have sold the same story, with approximately two hours of preparation.  The non-experts did not ask to see things which would
 be hard for non-Satoshi to provide -- they were at the mercy of the charlatan (paging James Randi, James Randi to the courtesy phone please).
